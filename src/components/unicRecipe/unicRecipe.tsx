@@ -15,8 +15,7 @@ export function UnicRecipe() {
       <>
         <div className="container__grid-recipe">
           <div className="container__grid--text">
-            <p className="featured">Receta destacada</p>
-            <h2 className="featured--img">
+            <h2 className="featured--title">
               {(featuredRecipe as iRecipe).title}
             </h2>
             <p className="featured--text">

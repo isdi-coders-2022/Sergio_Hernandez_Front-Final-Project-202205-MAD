@@ -1,5 +1,6 @@
+import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import { iRecipe } from '../interfaces/interfaces';
 
@@ -7,11 +8,18 @@ import { updateUserAction } from '../reducer/user/user.action.creators';
 import { HttpUser } from '../services/http.user';
 import './recipe.css';
 export function RecipePage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const location = useLocation();
   const stateRecipe = location.state as { recipe: iRecipe };
-
+  const user = localStorage.getItem('token');
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   function handleFav() {
+    if (!user) {
+      navigate('/login');
+    }
     new HttpUser()
       .addToFavorites(stateRecipe.recipe._id as string)
       .then((resp) => {
@@ -37,7 +45,6 @@ export function RecipePage() {
               </h4>
             </figcaption>
           </figure>
-
           <button
             onClick={() => {
               handleFav();

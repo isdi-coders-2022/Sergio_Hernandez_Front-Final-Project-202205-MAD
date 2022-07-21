@@ -5,24 +5,28 @@
   align-items: center;
 }
 .container__grid-recipe {
-  background: linear-gradient(
-    90deg,
-    rgba(252, 241, 196, 1) 77%,
-    rgba(255, 255, 255, 1) 80%
-  );
+  background-color: rgba(252, 241, 196, 1);
   display: grid;
-  grid-template-columns: repeat(11, 1fr);
+  grid-template-columns: repeat(15, 1fr);
 }
 .container__grid--text {
   align-items: flex-start;
-  grid-column: 1 / span 5;
+  grid-column: 1 / span 7;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: 5%;
 }
+.featured--text {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+}
 .container__grid--img {
-  grid-column: 7 / span 6;
+  grid-column: 8 / span 8;
+  justify-self: flex-end;
+  align-self: start;
+  align-self: center;
 }
 
 .card-recipe {
@@ -65,4 +69,29 @@
   align-items: center;
   font-size: 3.8rem;
   padding-bottom: 2rem;
+}
+.picture--poster {
+  padding: 7%;
+  position: relative;
+  box-sizing: border-box;
+  background-color: rgb(189, 189, 189);
+  box-shadow: 0 3px 12px alpha(black, 0.2);
+  filter: saturate(70%) contrast(85%);
+}
+.featured--title {
+  font-size: 1.5rem;
+}
+.featured-recipe {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2rem;
+}
+.name-user-text {
+  padding: 1rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+}
+.name-user {
+  padding: 2rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
 }

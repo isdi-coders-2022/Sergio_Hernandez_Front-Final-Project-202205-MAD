@@ -15,7 +15,9 @@ export function ProfilePage() {
       <div className="page-content">
         {storeUser && (
           <div className="main-container">
-            <h2> Mis Recetas Favoritas</h2>
+            <h2 className="name-user">
+              Hola {storeUser.userName} estas son tus recetas favoritas
+            </h2>
             <ul className="container-picture">
               {storeUser.recipes?.map((recipe) => (
                 <li key={recipe._id}>
