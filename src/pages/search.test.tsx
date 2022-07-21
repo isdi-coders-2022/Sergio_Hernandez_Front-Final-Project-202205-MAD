@@ -44,9 +44,9 @@ describe('Given the component SearchMultiple', () => {
         }
       );
 
-      const display = screen.getByText(/nevera/);
+      const display = screen.getAllByText(/nevera/);
       // fireEvent.change(input, { target: { value: 'ramen' } });
-      expect(display).toBeInTheDocument();
+      expect(display).toHaveLength(2);
     });
   });
 });

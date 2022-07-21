@@ -11,7 +11,7 @@
 }
 .container__grid--text {
   align-items: flex-start;
-  grid-column: 1 / span 7;
+  grid-column: 2 / span 6;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,6 +21,7 @@
 .featured--text {
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
+  text-align: justify;
 }
 .container__grid--img {
   grid-column: 8 / span 8;
@@ -94,4 +95,15 @@
   padding: 2rem;
   font-family: 'Lato', sans-serif;
   font-size: 2rem;
+}
+.title-search {
+  font-size: 2rem;
+}
+.text-search {
+  font-size: 1.3rem;
+  font-family: 'Lato', sans-serif;
+}
+.text-search2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 1;
 }
