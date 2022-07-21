@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { ListRecipes } from '../components/listRecipes/list.recipes';
 import { UnicRecipe } from '../components/unicRecipe/unicRecipe';
 import './home.css';
-import 'animate.css';
+
 export function HomePage() {
   useEffect(() => {
     window.scrollTo(0, 0);

@@ -48,9 +48,10 @@ describe('Given the page Recipe page', () => {
         .mockResolvedValue({ token: '9', user: { test: 'pepe' } });
       fireEvent.click(screen.getByRole('button'));
 
-      let result = screen.getByText(/Receta/);
+      let result = screen.getByText(/Ingredientes/);
 
       expect(result).toBeInTheDocument();
+      expect(HttpUser.prototype.addToFavorites).toHaveBeenCalled();
     });
   });
 });

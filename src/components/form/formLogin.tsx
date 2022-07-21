@@ -25,10 +25,8 @@ export function FormLogin() {
       navigate('/');
     } else {
       Swal.fire({
-        title: 'Error!',
-        text: 'Do you want to continue',
-        icon: 'error',
-        confirmButtonText: 'Cool',
+        text: 'Contraseña incorrecta',
+        confirmButtonText: 'Ok',
       });
     }
   };
@@ -44,7 +42,7 @@ export function FormLogin() {
     <div className="form__container">
       <form onSubmit={handleSubmit}>
         <header className="form__header">
-          <h2 className="form__title"> LOGIN</h2>
+          <h2 className="form__title"> Login</h2>
           <p className="form__legend">
             Por favor, introduce tu e-mail y contraseña
           </p>
@@ -75,12 +73,12 @@ export function FormLogin() {
 
         <div className="form__hint">
           <button type="submit" className="btn btn1">
-            Login
+            ¡Logueate!
           </button>
           <p className="form__hint--text">
-            ¿No tienes una cuenta?{' '}
+            ¿No tienes una cuenta?
             <Link className="form__hint--text2" to={'/register'}>
-              Create una{' '}
+              Create una
             </Link>
           </p>
         </div>

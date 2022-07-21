@@ -62,7 +62,7 @@ describe('Given the component FormLogin', () => {
           ) as HTMLFormElement;
           fireEvent.change(input, { target: { value: 'email' } });
 
-          const button = screen.getByText(/Login/);
+          const button = screen.getByText(/¡Logueate!/);
           fireEvent.click(button);
 
           expect(HttpUser.prototype.loginUser).toBeCalled();
@@ -77,7 +77,7 @@ describe('Given the component FormLogin', () => {
           HttpUser.prototype.loginUser = jest.fn().mockResolvedValue({});
           const inputs = screen.getAllByRole('textbox');
           fireEvent.change(inputs[0], { target: { value: 'test' } });
-          const button = screen.getByText(/Login/);
+          const button = screen.getByText(/¡Logueate!/);
           fireEvent.click(button);
           await waitFor(() => {
             expect(sweetalert2.fire).toHaveBeenCalled();

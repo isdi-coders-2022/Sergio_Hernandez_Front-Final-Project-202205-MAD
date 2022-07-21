@@ -11,6 +11,7 @@
   margin-bottom: 35px;
   margin-left: auto;
   text-align: center;
+  font-family: 'Lato', sans-serif;
 }
 
 .form__container {
@@ -88,4 +89,13 @@
 }
 .form__hint--text2:hover {
   color: #2b2b2b;
+}
+.form__title {
+  font-family: 'Lato', sans-serif;
+}
+.form__legend {
+  font-family: 'Lato', sans-serif;
+}
+.form__hint--text {
+  font-family: 'Lato', sans-serif;
 }
