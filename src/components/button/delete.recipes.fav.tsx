@@ -12,7 +12,7 @@ export function DeleteRecipesFav({ id }: { id: string }) {
   }
 
   let template = (
-    <button className="buttonRemove" onClick={handleclick}>
+    <button className="button-fav buttonRemove" onClick={handleclick}>
       Eliminar Receta
     </button>
   );
